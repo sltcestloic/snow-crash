@@ -3,14 +3,15 @@
 Quand on se connecte au compte `level05` on voit un message qui dit `You have new mail.`<br>
 les mails sont stockés dans `/var/mail/$USER`
 
-```
+```sh
 level05@SnowCrash:~$ cat /var/mail/level05 
 */2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
 ```
 
 C'est un cronjob qui execute `sh /usr/sbin/openarenaserver` en tant que `flag05` toutes les 2 minutes
 
-```level05@SnowCrash:/tmp$ cat /usr/sbin/openarenaserver
+```sh 
+level05@SnowCrash:/tmp$ cat /usr/sbin/openarenaserver
 #!/bin/sh
 
 for i in /opt/openarenaserver/* ; do
